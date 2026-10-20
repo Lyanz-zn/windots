@@ -1,0 +1,45 @@
+[config]
+reload_apps = false
+
+[templates.yasb]
+input_path = '~/.config/windots/matugen/templates/yasb.css'
+output_path = '~/.config/yasb/colors.css'
+
+[templates.glazewm]
+input_path = '~/.config/windots/matugen/templates/glazewm.yaml'
+output_path = '~/.config/windots/matugen/generated/glazewm.yaml'
+post_hook = 'python ~/.config/windots/scripts/glazewm.py'
+
+[templates.windows_terminal]
+input_path = '~/.config/windots/matugen/templates/winterm.json'
+output_path = '~/.config/windots/matugen/generated/winterm.json'
+post_hook = 'python ~/.config/windots/scripts/merger.py ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json C:\Users\Lyanz\.config\windots\matugen\generated\winterm.json'
+
+[templates.neovim]
+input_path = "~/.config/windots/matugen/templates/nvim.json"
+output_path = "~/.config/windots/matugen/generated/nvim.json"
+
+[templates.starship]
+input_path = "~/.config/windots/matugen/templates/starship.toml"
+output_path = "~/.config/starship.toml"
+
+[templates.yazi]
+input_path = '~/.config/windots/matugen/templates/yazi.toml'
+output_path = '~/.config/yazi/theme.toml'
+
+[templates.btop]
+input_path = '~/.config/windots/matugen/templates/btop.theme'
+output_path = '~/scoop/persist/btop/themes/matugen.theme'
+
+[templates.zen-userchrome]
+input_path = "~/.config/windots/matugen/templates/zen-userchrome.css"
+output_path = "~/.config/windots/matugen/generated/zen-userchrome.css"
+
+[templates.zen-usercontent]
+input_path = "~/.config/windots/matugen/templates/zen-usercontent.css"
+output_path = "~/.config/windots/matugen/generated/zen-usercontent.css"
+
+[templates.flow-launcher]
+input_path = "~/.config/windots/matugen/templates/FlowLauncher.xaml"
+output_path = "~/scoop/apps/Flow-Launcher/current/app-2.1.3/UserData/Themes/Matugen.xaml"
+post_hook = 'python ~/.config/windots/scripts/reload_flow.py'

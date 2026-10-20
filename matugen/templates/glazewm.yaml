@@ -1,0 +1,7 @@
+window_effects:
+  focused_window:
+    border:
+      color: "{{colors.outline.default.hex}}"
+  other_window:
+    border:
+      color: "{{colors.outline_variant.default.hex}}"
